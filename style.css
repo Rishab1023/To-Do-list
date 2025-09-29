@@ -1,0 +1,24 @@
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bolder;
+}
+#title{
+  margin-left: 10px;
+}
+#input-field{
+  width: 100%;
+  margin: 10px;
+  margin-left: 10px;
+  padding: 10px;
+}
+#Add-btn{
+  width: 100px;
+  padding: 10px;
+  margin-left: 10px;
+  font-weight: 900;
+}
