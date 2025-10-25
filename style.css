@@ -55,7 +55,13 @@ li:hover{
   flex-direction: column;
 }
 
-.deletebtn{
-  background: black;
+.taskitem{
+  display: flex;
+  background-color: black;
   color: aliceblue;
+  justify-content: space-between;
+}
+.delbtn{
+  background: none;
+  border: none;
 }
