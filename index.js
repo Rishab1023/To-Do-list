@@ -5,7 +5,6 @@ const tasklistEl = document.querySelector("#Tasklist");
 
 // events
 addBtnEl.addEventListener("click",()=>{
-
   task()
 })
 
@@ -15,11 +14,8 @@ const task = () => {
   console.log("Button was pressed");
   inputArray.push(inputEl.value);
   console.log(inputArray);
+  inputEl.value = "";
   //html elements
-  inputEl.value.trim()
-  if(inputEl === ""){
-    return;
-  }
   const li = document.createElement("li"); // list element
   const deletebtn = document.createElement("button"); //delete button element
 // class names
@@ -37,5 +33,7 @@ const task = () => {
   tasklistEl.removeChild(li)
 })
 
+li.addEventListener("click",()=>{
+li.className = "CompletedTask"
+})
 }
-

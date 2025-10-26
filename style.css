@@ -66,3 +66,9 @@ li:hover{
   border: none;
   
 }
+
+.CompletedTask{
+  display: flex;
+  text-decoration: line-through;
+  justify-content: space-between;
+}
