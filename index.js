@@ -5,36 +5,37 @@ const tasklistEl = document.querySelector("#Tasklist");
 
 // events
 addBtnEl.addEventListener("click",()=>{
-  savebtn()
+
   task()
 })
 
-
-
-// functions
-const inputArray = [];
-inputArray.push(inputEl.value);
-const savebtn = () => {
-  console.log("Button was pressed");
-  console.log(inputArray);
-  
-}
-
-//html elements
-const li = document.createElement("li");
-const deletebtn = document.createElement("button");
-li.className = "taskitem";
-deletebtn.className = "delbtn";
-li.innerHTML = `<span> ${inputArray} </span>`;
-deletebtn.innerHTML = `<button>X</button>`;
-
 // add task function
 const task = () => {
+  const inputArray = [];
+  console.log("Button was pressed");
+  inputArray.push(inputEl.value);
+  console.log(inputArray);
+  //html elements
+  inputEl.value.trim()
+  if(inputEl === ""){
+    return;
+  }
+  const li = document.createElement("li"); // list element
+  const deletebtn = document.createElement("button"); //delete button element
+// class names
+  li.className = "taskitem";
+  deletebtn.className = "delbtn";
+// inner html
+  li.innerHTML = `<span> ${inputArray} </span>`; // list's inner html
+  deletebtn.innerHTML = `<button>X</button>`; // button's inner html
+
   tasklistEl.appendChild(li);
   li.appendChild(deletebtn);
-}
-
-// delete btn
-deletebtn.addEventListener("click", ()=>{
+  
+  // delete task function
+  deletebtn.addEventListener("click", ()=>{
   tasklistEl.removeChild(li)
 })
+
+}
+

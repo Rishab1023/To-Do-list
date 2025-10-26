@@ -57,11 +57,12 @@ li:hover{
 
 .taskitem{
   display: flex;
-  background-color: black;
+  background-color: rgb(66, 66, 66);
   color: aliceblue;
   justify-content: space-between;
 }
 .delbtn{
   background: none;
   border: none;
+  
 }
